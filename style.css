@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body {
+
+    background: black;
+}
+h1 {
+    text-align: center;
+    color: white;
+    padding: 50px;
+
+
+}
+#certifications {
+    display: flex;
+    justify-content: space-around;
+   
+}
+img {
+    border: 1px solid yellow;
+}
+#img3 {
+    display: flex;
+    justify-content: center;
+
+   
+    margin-top: 5%;
+}
+
