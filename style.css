@@ -5,12 +5,14 @@
 
 }
 body {
-
+    height: 100vh;
     background: black;
+    
+    
 }
-h1 {
+.txt-animado {
     text-align: center;
-    color: white;
+    
     padding: 50px;
     font-size: 42px;
 
@@ -31,4 +33,64 @@ img {
    
     margin-top: 5%;
 }
+.txt-animado, h1{
+    
+   font-size: 68px;
+    color: white;
+    line-height: 45px;
+    
+}
+.txt-animado span {
+ position: relative;
+ 
+}
+.txt-animado span::before {
+    content: "";
+    color: #1ce21c;
+    animation: words 40s infinite;
+    
 
+}
+.txt-animado span::after  {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -10px;
+    height: 100%;
+    border-left: 2px solid #1ce21c;
+    opacity: 1;
+    animation: piscar-cursor .8s infinite, apaga-txt 40s steps(15) infinite;
+    width: calc(100% + 16px);
+    background-color: black;
+    
+}
+@keyframes apaga-txt {
+    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95%{
+        width: 0;
+    }
+    5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85%{
+        width: calc(100% + 16px);
+    }
+}
+@keyframes piscar-cursor {
+    0%{
+        border-left: 2px solid black;
+    }
+}
+@keyframes words {
+    0%,20% {
+        content: "LPI-1 Linux Profissional";
+    }
+    21%,40% {
+        content: "CompTIA Linux+ POWERED-BY-LPI";
+    }
+    41%,60% {
+        content: "Desenvolvimento Web";
+    }
+    61%,80% {
+        content: "HTML5 CSS3 JAVASCRIPT";
+    }
+    81%,100% {
+        content: "Git Github";
+    }
+}
